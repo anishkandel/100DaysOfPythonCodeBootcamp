@@ -1,22 +1,47 @@
 # # Target is the number up to which we count
 # def fizz_buzz(target):
+# def fizz_buzz(target):
+#     for number in range(1, target+1):
+#         if number % 3 == 0 and number % 5 == 0:
+#             output = "FizzBuzz"
+#             print(output)
+#         elif number % 3 == 0:
+#             output = "Fizz"
+#             print(output)
+#         elif number % 5 == 0:
+#             output = "Buzz"
+#             print(output)
+#         else:
+#             print(number)
+
+
+# user_number = int(input())
+# fizz_buzz(user_number)
+
+
+#########
+import sys
+
 def fizz_buzz(target):
-    for number in range(1, target+1):
+    for number in range(1, target + 1):
         if number % 3 == 0 and number % 5 == 0:
-            output = "FizzBuzz"
-            print(output)
+            print("FizzBuzz")
         elif number % 3 == 0:
-            output = "Fizz"
-            print(output)
+            print("Fizz")
         elif number % 5 == 0:
-            output = "Buzz"
-            print(output)
+            print("Buzz")
         else:
             print(number)
 
+# ✅ Get number from command-line argument
+if len(sys.argv) > 1:
+    user_number = int(sys.argv[1])  # Read from argument
+else:
+    user_number = 15  # Default value if no argument is provided
 
-user_number = int(input())
 fizz_buzz(user_number)
+
+
 
 # 
 # # Target is the number up to which we count
